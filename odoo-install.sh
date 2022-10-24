@@ -3,7 +3,7 @@
 # Script for installing Odoo on Ubuntu 16.04, 18.04 and 20.04 or Debian 10
 # (could be used for other version too)
 #-------------------------------------------------------------------------------
-# This script will install Odoo on your Ubuntu server. It can install 
+# This script will install Odoo on your Ubuntu/Debian server. It can install 
 # multiple Odoo instances in one Ubuntu because of the different xmlrpc_ports
 #-------------------------------------------------------------------------------
 # Run with command:
