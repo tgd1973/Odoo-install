@@ -1,6 +1,6 @@
 <h3>Installation procedure</h3>
 
-1. **Download the script:**
+1. **Download the script and run:**
 ```text
 sudo wget https://raw.githubusercontent.com/tgd1973/Odoo-install/main/odoo-install.sh && sudo chmod +x odoo-install.sh && sudo ./odoo-install.sh
 ```
