@@ -16,4 +16,14 @@ sudo apt-get install git -y
 cd /tmp/
 sudo git clone https://github.com/tgd1973/Odoo-install/
 cd /tmp/Odoo-install/install/
-sudo chmod +x run.sh && sudo ./run.sh
+sudo chmod +x run.sh 
+while true; do
+        echo "If you want to use the default settings with Odoo v15. & PostgreSQL v14 continue."
+        read -p 'If you want to make changes, stop here. Continue ? (y/n)' yn
+        case $yn in
+        [Yy]*) break ;;
+        [Nn]*) exit ;;
+        *) echo "Please answer Yes or No." ;;
+        esac
+done
+sudo ./run.sh
