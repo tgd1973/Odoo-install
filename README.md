@@ -1,8 +1,8 @@
 <h3>Installation procedure</h3>
 
-1. **Download the script and run:**
+1. **Download the script:**
 ```text
-sudo wget https://raw.githubusercontent.com/tgd1973/Odoo-install/main/odoo-install.sh && sudo chmod +x odoo-install.sh && sudo ./odoo-install.sh
+sudo wget https://raw.githubusercontent.com/tgd1973/Odoo-install/main/odoo-install.sh && sudo chmod +x odoo-install.sh
 ```
 2. **Modify the parameters as you wish.**
 There are a few things you can configure, this is the most used list:
@@ -21,3 +21,8 @@ There are a few things you can configure, this is the most used list:
 - OE_DB_PASSWORD - is the password of postgres user.
 - OE_WORKERS - is the number of Odoo workers
 - PG_VERSION - is a version of postgresql installed
+
+3. **Run the script:**
+```text
+sudo ./odoo-install.sh
+```
