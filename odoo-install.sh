@@ -19,3 +19,4 @@ sudo apt-get install git -y
 cd /tmp
 sudo git clone https://github.com/tgd1973/Odoo-install/install
 cd /tmp/install
+sudo chmod +x run.sh && sudo ./run.sh
