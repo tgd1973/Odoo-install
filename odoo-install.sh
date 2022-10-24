@@ -1,5 +1,3 @@
-387 lines (356 sloc)  15.5 KB
-
 #!/bin/bash
 ################################################################################
 # Script for installing Odoo on Ubuntu 16.04, 18.04 and 20.04 (could be used for other version too)
