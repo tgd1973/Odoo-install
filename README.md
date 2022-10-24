@@ -5,7 +5,10 @@
 sudo wget https://raw.githubusercontent.com/tgd1973/Odoo-install/main/odoo-install.sh && sudo chmod +x odoo-install.sh
 ```
 2. **Modify the parameters as you wish.**
-There are a few things you can configure, this is the most used list:
+There are a few things you can configure, on the folder you just downloaded, 
+which finds it in: /tmp/Odoo-install/install/
+
+    This options is the most used:
 
 - OE_USER - will be the username for the system user.
 - OE_HOME - will be the home directory of the system user.
