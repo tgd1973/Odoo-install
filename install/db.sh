@@ -33,11 +33,14 @@ else
     fi
 fi
 
-echo -e "\n---- Install PostgreSQL Server ----"
+echo -e "\n---- Install REPO - PostgreSQL Server ----" && sleep 3
 if [ $PG_ALREADY_INSTALLED == "False" ]; then
     sudo apt-get install software-properties-common -y
-    sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
-    wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+    # sudo add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ $(lsb_release -sc)-pgdg main"
+	curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo gpg --dearmor -o /usr/share/keyrings/postgresql-keyring.gpg
+    # wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+	echo "deb [signed-by=/usr/share/keyrings/postgresql-keyring.gpg] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main" | sudo tee /etc/apt/sources.list.d/postgresql.list
+
     sudo apt-get update
 fi
 
@@ -47,7 +50,7 @@ if [ $INSTALL_PG_SERVER = "True" ]; then
     export PG_HBA="/etc/postgresql/$PG_VERSION/main/pg_hba.conf"
 
     if [ $PG_ALREADY_INSTALLED == "False" ]; then
-        echo -e "\n---- Install PostgreSQL Server ----"
+        echo -e "\n---- Install PostgreSQL Server ----" && sleep 3
         sudo apt-get install postgresql-$PG_VERSION -y
 
         # Edit postgresql.conf to change listen address to '*':
@@ -91,6 +94,6 @@ if [ $INSTALL_PG_SERVER = "True" ]; then
     # Restart so that all new config is loaded:
     sudo service postgresql restart
 else
-    echo -e "\n---- Install PostgreSQL Client ----"
+    echo -e "\n---- Install PostgreSQL Client ----" && sleep 3
     sudo apt-get install postgresql-client-$PG_VERSION -y
 fi
