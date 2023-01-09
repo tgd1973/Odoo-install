@@ -12,7 +12,7 @@ which finds it in: /tmp/Odoo-install/install/
 
 - OE_USER - will be the username for the system user.
 - OE_HOME - will be the home directory of the system user.
-- OE_VERSION - is the Odoo version to install, for example _15.0_ for Odoo V15.0
+- OE_VERSION - is the Odoo version to install, for example _16.0_ for Odoo V16.0
 - OE_INSTALL_DIR - is the path where all environment will be installed to.
 - OE_REPO - is the path where odoo will be clonned to.
 - INSTALL_WKHTMLTOPDF - set to _False_ if you do not want to install it, if you want to install it you should set it to _True_.
