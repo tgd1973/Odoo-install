@@ -106,6 +106,7 @@ if [ ! -f "$OE_CONFIG" ]; then
 cat <<EOF > $OE_CONFIG
 [options]
 admin_passwd = $OE_SUPERADMIN
+# admin_passwd = $OE_SUPERADMIN
 db_host = $OE_DB_HOST
 db_port = $OE_DB_PORT
 db_user = $OE_DB_USER
