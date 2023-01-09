@@ -23,7 +23,7 @@ echo "
 ------------------------------------
 "
 while true; do
-        echo "If you want to use the default settings with Odoo-v15 & PostgreSQL-v14 continue."
+        echo "If you want to use the default settings with Odoo-v16 & PostgreSQL-v14 continue."
         read -p 'If you want to make changes, stop here and reload install. Continue ? (y/n)' yn
         case $yn in
         [Yy]*) break ;;
