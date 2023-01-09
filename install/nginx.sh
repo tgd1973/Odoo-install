@@ -5,7 +5,7 @@
 
 if [ $WEB_SERVER = "nginx" ]; then
 
-echo -e "* Install $WEB_SERVER"
+echo -e "* ------ Install $WEB_SERVER ------" && sleep 3
 sudo apt-get install -y $WEB_SERVER
 
 echo -e "Configuring Odoo with Nginx"
