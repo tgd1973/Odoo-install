@@ -30,7 +30,7 @@ WEB_SERVER="nginx" # or "apache2"
 
 HTTP_PROTOCOL="https"
 HTTPS_PORT="443"
-INSTALL_CERTIFICATE="True"
+INSTALL_CERTIFICATE="false"
 PUBLIC_IP="" # SET MANUALLY
 DOMAIN_NAME="_" # DNS SHOULD BE ALREADY CONFIGURED!
 DOMAIN_ALIASES=() # ("www.demo.ventortech.com" "zzz.demo.ventortech.com")
