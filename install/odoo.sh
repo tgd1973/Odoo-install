@@ -8,7 +8,7 @@ else
     OE_BIN="openerp-server"
 fi
 
-echo -e "\n---- Python Dependencies ----" sleep 3
+echo -e "\n---- Python Dependencies ----" && sleep 3
 
 if [ $PYTHON_VERSION = "3" ]; then
 #----------------- Python 3 ------------------
@@ -25,7 +25,7 @@ else
     sudo apt-get install -y python-dev python-virtualenv python-setuptools python-pip
 fi
 
-echo -e "\n---- Odoo Web Dependencies ----" sleep 3
+echo -e "\n---- Odoo Web Dependencies ----" && sleep 3
 
 sudo apt-get install -y nodejs npm
 sudo apt-get install -y node-less node-clean-css
@@ -54,7 +54,7 @@ else
 fi
 
   
-echo -e "\n---- Create Log directory ----" sleep 3
+echo -e "\n---- Create Log directory ----" && sleep 3
 mkdir -p $OE_LOG_PATH
 
 #--------------------------------------------------
