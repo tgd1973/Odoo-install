@@ -2,13 +2,13 @@
 #--------------------------------------------------
 # Install Dependencies
 #--------------------------------------------------
-if [ $OE_VERSION = "10.0" ] || [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ]; then
+if [ $OE_VERSION = "10.0" ] || [ $OE_VERSION = "11.0" ] || [ $OE_VERSION = "12.0" ] || [ $OE_VERSION = "13.0" ] || [ $OE_VERSION = "14.0" ] || [ $OE_VERSION = "15.0" ] || [ $OE_VERSION = "16.0" ]; then
     OE_BIN="odoo-bin"
 else
     OE_BIN="openerp-server"
 fi
 
-echo -e "\n---- Python Dependencies ----"
+echo -e "\n---- Python Dependencies ----" sleep 3
 
 if [ $PYTHON_VERSION = "3" ]; then
 #----------------- Python 3 ------------------
@@ -25,7 +25,7 @@ else
     sudo apt-get install -y python-dev python-virtualenv python-setuptools python-pip
 fi
 
-echo -e "\n---- Odoo Web Dependencies ----"
+echo -e "\n---- Odoo Web Dependencies ----" sleep 3
 
 sudo apt-get install -y nodejs npm
 sudo apt-get install -y node-less node-clean-css
@@ -38,7 +38,7 @@ sudo npm install -g less less-plugin-clean-css
 
 INSTALL_WKHTMLTOPDF_VERSION=`wkhtmltopdf --version`
 if [ $INSTALL_WKHTMLTOPDF = "True" ] && [ -z "$INSTALL_WKHTMLTOPDF_VERSION" ]; then
-  echo -e "\n---- Install wkhtml and place shortcuts on correct place for ODOO $OE_VERSION ----"
+  echo -e "\n---- Install wkhtml and place shortcuts on correct place for ODOO $OE_VERSION ----"  && sleep 3
 
   OS_RELEASE=`lsb_release -sc`
   if [ "`getconf LONG_BIT`" == "64" ];then
@@ -54,7 +54,7 @@ else
 fi
 
   
-echo -e "\n---- Create Log directory ----"
+echo -e "\n---- Create Log directory ----" sleep 3
 mkdir -p $OE_LOG_PATH
 
 #--------------------------------------------------
@@ -96,7 +96,7 @@ if [ $IS_ENTERPRISE = "True" ]; then
     fi
 fi
 if [ ! -d "$OE_INSTALL_DIR/all_addons" ]; then
-    echo -e "\n---- Create custom module directory ----"
+    echo -e "\n---- Create custom module directory ----"  && sleep 3
     mkdir -p $OE_INSTALL_DIR/all_addons
 fi
 
