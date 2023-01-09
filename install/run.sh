@@ -1,11 +1,18 @@
 #!/bin/bash
-####################################################################################################
-# Script for installing Odoo on Ubuntu 14.04, 15.04 and 16.04, Debian 10                           #
-# (could be used for other version too)                                                            #
-#--------------------------------------------------------------------------------------------------#
-# This script will install Odoo v15.0 on your Ubunt / Debian server. It can install multiple Odoo  #
-# instances in one Ubuntu because of the different xmlrpc_ports                                    #
-####################################################################################################
+################################################################################
+# Script for installing Odoo on Ubuntu 14.04, 15.04 and 16.04 (could be used for other version too)
+# Author: Yenthe Van Ginneken
+#-------------------------------------------------------------------------------
+# This script will install Odoo on your Ubuntu 14.04 server. It can install multiple Odoo instances
+# in one Ubuntu because of the different xmlrpc_ports
+#-------------------------------------------------------------------------------
+# Make a new file:
+# nano odoo-install.sh
+# Place this content in it and then make the file executable:
+# chmod +x odoo-install.sh
+# Execute the script to install Odoo:
+# ./odoo-install
+################################################################################
  
 if [[ $EUID -ne 0 ]]; then
    echo "Script is run as regular user. Odoo will be installed from his name" 
@@ -16,7 +23,7 @@ else
    OE_USER="odoo"
    OE_HOME="/opt/$OE_USER"
 
-   echo -e "\n---- Create ODOO system user ----"
+   echo -e "\n---- Create ODOO system user ----" && sleep 3
    adduser --system --quiet --shell=/bin/bash --home=$OE_HOME --gecos 'ODOO' --group $OE_USER
    #The user should also be added to the sudo'ers group.
    adduser $OE_USER sudo
@@ -31,7 +38,7 @@ export LC_ALL=en_US.UTF-8
 #--------------------------------------------------
 # Update Server
 #--------------------------------------------------
-echo -e "\n---- Update Server ----"
+echo -e "\n---- Update Server ----" sleep 3
 sudo apt-get update
 sudo apt-get upgrade -y
 
