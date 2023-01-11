@@ -47,10 +47,16 @@ server {
    proxy_redirect off;
    proxy_pass http://$OE_WEBSERVER_HOST;
  }
+ # Redirect websocket requests to odoo_v7-v15 port
  location /longpolling {
      proxy_pass http://chat_$OE_WEBSERVER_HOST;
  }
-
+  # Redirect websocket requests to odoo_v16 gevent port
+  location /websocket {
+    proxy_pass http://chat_$OE_WEBSERVER_HOST;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection $connection_upgrade;
+ }
  # Specifies the maximum accepted body size of a client request,
  # as indicated by the request header Content-Length.
  client_max_body_size 200m;
