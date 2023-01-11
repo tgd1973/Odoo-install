@@ -56,6 +56,10 @@ server {
     proxy_pass http://chat_$OE_WEBSERVER_HOST;
     proxy_set_header Upgrade $http_upgrade;
     proxy_set_header Connection $connection_upgrade;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Real-IP $remote_addr;
  }
  # Specifies the maximum accepted body size of a client request,
  # as indicated by the request header Content-Length.
