@@ -23,7 +23,10 @@ upstream $OE_WEBSERVER_HOST {
 upstream chat_$OE_WEBSERVER_HOST {
  server 127.0.0.1:$OE_LONGPOOL_PORT;
 }
-
+map $http_upgrade $connection_upgrade {
+  default upgrade;
+  ''      close;
+}
 server {
  server_name $domains;
  listen 80;
