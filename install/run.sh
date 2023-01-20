@@ -46,9 +46,24 @@ sudo apt-get install git wget python-setuptools build-essential dnsutils lsb-rel
 
 
 source db.sh
-
+echo "  
+------------------------------------
+ Time for modify options install's
+------------------------------------
+"
+while true; do
+        echo "If you want to use the default settings with Odoo ... continue."
+        read -p 'If you want to make changes, stop here, modiffy the CONF then reload install. Continue ? (y/n)' yn
+        case $yn in
+        [Yy]*) break ;;
+        [Nn]*) exit ;;
+        *) echo "Please answer Yes or No." ;;
+        esac
+done
+if [ $OS_VERS = "True" ]; then
 source odoo14.sh
-
+else
+source odoo.sh
 source initd.sh
 
 # -------------------------------
