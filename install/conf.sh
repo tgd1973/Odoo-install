@@ -2,8 +2,8 @@
 ##fixed parameters
 #odoo
 
-OE_VERSION="16.0"
-OS_VERSREPO="False" #Set TRUE to odoo14 if you want to install odoo14 from REPO
+OE_VERSION="16.0"  ##|
+OS_VERSREPO="False" #| #Set TRUE to odoo14 if you want to install odoo14 from REPO
 OE_INSTALL_DIR="$OE_HOME/$OE_VERSION"
 OE_REPO="$OE_INSTALL_DIR/odoo"
 #Set to true if you want to install it, false if you don't need it or have it already installed.
