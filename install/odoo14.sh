@@ -19,8 +19,7 @@
 if [ $PYTHON_VERSION = "3" ]; then
 #----------------- Python 3 ------------------
     if [ $(which python3.6) ] || [ $(which python3.7) ] || [ $(which python3.8) ] || [ $(which python3.9) ]; then
-        sudo apt-get install -y python3-pip python3-dev python3-setuptools python3-venv python3-wheel pip3 install codicefiscale
-pip3 install python-telegram-bot --upgrade
+        sudo apt-get install -y python3-pip python3-dev python3-setuptools python3-venv python3-wheel
     else
         echo "System has wrong python version! Odoo supports only 3.6+ python"
         exit 1
@@ -62,7 +61,8 @@ fi
   
 echo -e "\n---- Create Log directory ----" && sleep 3
 mkdir -p $OE_LOG_PATH
-
+pip3 install codicefiscale
+pip3 install python-telegram-bot --upgrade
 #--------------------------------------------------
 # Install ODOO
 #--------------------------------------------------
