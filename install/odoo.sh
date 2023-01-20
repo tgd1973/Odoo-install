@@ -81,6 +81,8 @@ if [[ -f $OE_REPO/requirements.txt ]]; then
     echo "Installing from $OE_REPO/requirements.txt with pip."
     if [ $PYTHON_VERSION = "3" ]; then
         pip3 install -r $OE_REPO/requirements.txt
+        pip3 uninstall cryptography
+        pip3 install cryptography==3.1.1
     else
         pip install -r $OE_REPO/requirements.txt
     fi
