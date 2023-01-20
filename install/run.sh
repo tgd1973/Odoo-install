@@ -60,7 +60,7 @@ while true; do
         *) echo "Please answer Yes or No." ;;
         esac
 done
-if [ $OS_VERS = "True" ]; then
+if [ $OS_VERSREPO = "True" ]; then
 source odoo14.sh
 else
 source odoo.sh
