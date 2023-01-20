@@ -44,6 +44,7 @@ sudo apt-get upgrade -y
 
 sudo apt-get install git wget python-setuptools build-essential dnsutils lsb-release software-properties-common sudo -y
 
+
 source db.sh
 
 source odoo.sh
