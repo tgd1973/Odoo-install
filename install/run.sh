@@ -47,7 +47,7 @@ sudo apt-get install git wget python-setuptools build-essential dnsutils lsb-rel
 
 source db.sh
 
-source odoo.sh
+source odoo14.sh
 
 source initd.sh
 
