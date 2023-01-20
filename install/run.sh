@@ -64,6 +64,7 @@ if [ $OS_VERSREPO = "True" ]; then
 source odoo14.sh
 else
 source odoo.sh
+fi
 source initd.sh
 
 # -------------------------------
