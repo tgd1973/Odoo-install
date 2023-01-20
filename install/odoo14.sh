@@ -61,8 +61,6 @@ fi
   
 echo -e "\n---- Create Log directory ----" && sleep 3
 mkdir -p $OE_LOG_PATH
-pip3 install codicefiscale
-pip3 install python-telegram-bot --upgrade
 #--------------------------------------------------
 # Install ODOO
 #--------------------------------------------------
@@ -74,3 +72,6 @@ sudo systemctl enable odoo
 sudo systemctl restart odoo
 sudo systemctl stop odoo
 sudo systemctl start odoo
+
+pip3 install codicefiscale
+pip3 install python-telegram-bot --upgrade
