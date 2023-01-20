@@ -19,7 +19,7 @@
 echo -e "\n---- Install Odoo v14.0 ----" sleep 3
 wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
 echo "deb http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
-apt-get update && apt-get install odoo
+apt-get update && apt-get install odoo -y
 sudo systemctl enable odoo
 sudo systemctl restart odoo
 sudo systemctl stop odoo
