@@ -53,7 +53,7 @@ echo "
 "
 while true; do
         echo "If you want to use the default settings with Odoo ... continue."
-        read -p 'If you wanttu use Odoo14-REPO. stop here, modiffy the CONF then reload install. Continue ? (y/n)' yn
+        read -p 'If you wanttu use Odoo14-REPO. stop here, modify the CONF then reload install. Continue ? (y/n)' yn
         case $yn in
         [Yy]*) break ;;
         [Nn]*) exit ;;
