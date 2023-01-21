@@ -73,5 +73,13 @@ sudo systemctl restart odoo
 sudo systemctl stop odoo
 sudo systemctl start odoo
 
+sudo apt-get -y install python3-pip
+
 pip3 install codicefiscale
 pip3 install python-telegram-bot --upgrade
+pip3 install xmlschema
+pip3 install openupgradelib
+pip3 install asn1crypto
+pip3 install Unidecode
+
+echo -e "\n---- Installed Odoo v14.0 and Dependence ----" sleep 3
