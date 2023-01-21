@@ -41,19 +41,10 @@ sudo npm install -g less less-plugin-clean-css
 
 INSTALL_WKHTMLTOPDF_VERSION=`wkhtmltopdf --version`
 if [ $INSTALL_WKHTMLTOPDF = "True" ] && [ -z "$INSTALL_WKHTMLTOPDF_VERSION" ]; then
-  echo -e "\n---- Install wkhtml and place shortcuts on correct place for ODOO $OE_VERSION ----"  && sleep 3
+sudo apt-get install -y wkhtmltopdf
 
-  OS_RELEASE=`lsb_release -sc`
-  if [ "`getconf LONG_BIT`" == "64" ];then
-      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1."$OS_RELEASE"_amd64.deb
-  else
-      _url=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1."$OS_RELEASE"_i386.deb
-  fi
-  wget $_url
-  sudo dpkg -i `basename $_url`
-  sudo apt-get install -f -y
 else
-  echo "Wkhtmltopdf isn't installed due to the choice of the user!"
+  echo "Wkhtmltopdf isn't installed due to the choice of the user!" && sleep 3
 fi
 
   
