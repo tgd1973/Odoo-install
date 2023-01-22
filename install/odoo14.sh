@@ -25,6 +25,7 @@ pip3 install xmlschema
 pip3 install openupgradelib
 pip3 install asn1crypto
 pip3 install Unidecode
+pip3 install PyPDF2
  
 
 
