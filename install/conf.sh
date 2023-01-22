@@ -27,7 +27,7 @@ OE_DB_USER="odoo"
 OE_DB_PASSWORD="odoo"
 PG_VERSION=14
 
-WEB_SERVER="nginx" # or "apache2"
+WEB_SERVER="nginx" # or "apache2" or "False" if false, the proxy does not install
 
 HTTP_PROTOCOL="https"
 HTTPS_PORT="443"
