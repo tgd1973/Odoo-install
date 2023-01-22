@@ -17,7 +17,7 @@
  echo -e "\n---- Python Dependencies ----" && sleep 3
 
 
- sudo apt-get install -y python3-pip python3-dev python3-setuptools python3-venv python3-wheel
+ sudo apt-get install -y python3-pip python3-dev python3-setuptools python3-venv python3-wheel python3-pypdf2 
 
 pip3 install codicefiscale
 pip3 install python-telegram-bot --upgrade
@@ -25,7 +25,6 @@ pip3 install xmlschema
 pip3 install openupgradelib
 pip3 install asn1crypto
 pip3 install Unidecode
-pip3 install PyPDF2
  
 
 
