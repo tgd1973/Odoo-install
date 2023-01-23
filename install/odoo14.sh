@@ -55,7 +55,6 @@ mkdir -p $OE_LOG_PATH
 #--------------------------------------------------
 echo -e "\n---- Install Odoo v14.0 ----" sleep 3
 mkdir /var/lib/odoo
-# chmod -R 777 /var/lib/odoo
 sudo ln -s /etc/odoo/odoo.conf /opt/odoo/14.0/odoo.conf
 wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
 echo "deb http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
